@@ -118,7 +118,6 @@
 
 
 - (void) config {
-    _originalDataSource = self.tableView.dataSource;
     _originalCellsSeparatorColor = self.tableView.separatorColor;
     _loadingView = [[LoadingView alloc]initWithFrame:CGRectZero];
     _noContentView = [[LabelView alloc]initWithFrame:CGRectZero];
