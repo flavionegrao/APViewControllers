@@ -126,6 +126,12 @@
     _noContentButton = _noContentView.button;
 }
 
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    self.originalDataSource = self.tableView.dataSource;
+
+}
+
 
 - (void) setContentStatus:(UITableViewContentStatus)contentStatus {
     switch (contentStatus) {
