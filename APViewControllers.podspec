@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "APViewControllers"
-  s.version          = "0.1"
+  s.version          = "0.2"
   s.summary          = "Custom View Controllers"
   s.homepage         = "https://github.com/flavionegrao/APViewControllers"
   s.license          = 'MIT'
