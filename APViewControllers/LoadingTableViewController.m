@@ -49,13 +49,15 @@
 - (void) config {
     UILabel* label = [[UILabel alloc]initWithFrame:CGRectZero];
     label.translatesAutoresizingMaskIntoConstraints = NO;
+    label.numberOfLines = 0;
+    label.textAlignment = NSTextAlignmentCenter;
     [self addSubview:label];
     self.label = label;
     
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:label attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
-    
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:label attribute:NSLayoutAttributeBottom multiplier:1 constant:4]];
-    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[label]-|" options:0 metrics:nil views:@{@"label":label}]];
+
     UIButton* button = [[UIButton alloc]initWithFrame:CGRectZero];
     button.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:button];
